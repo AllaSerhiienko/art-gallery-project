@@ -1,0 +1,22 @@
+@mixin onMobile{
+  @media (max-width: 639px) {
+    @content;
+  }
+}
+
+@mixin onTablet {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin square ($size) {
+  width: $size;
+  height: $size;
+}

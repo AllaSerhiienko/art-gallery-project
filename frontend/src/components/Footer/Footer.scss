@@ -1,0 +1,26 @@
+@import '@/styles/main';
+
+.footer {
+  background-color: $colorPrimary;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+  }
+  
+  &__list {
+    display: flex;
+    gap: 12px;
+
+    @include onTablet {
+      gap: 40px;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 8px;
+  }
+}

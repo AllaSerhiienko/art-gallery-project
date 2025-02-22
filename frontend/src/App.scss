@@ -1,0 +1,54 @@
+@import './styles/main';
+
+// iframe {
+//   display: none;
+// }
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+
+  &__content {
+    margin-top: 24px;
+
+    @include onTablet {
+      margin-top: 36px;
+    }
+
+    @include onDesktop {
+      margin-top: 40px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -0.01em;
+
+    @include onTablet {
+      margin-bottom: 30px;
+      font-size: 36px;
+    }
+
+    @include onDesktop {
+      font-size: 44px;
+    }
+  }
+
+   &__actions {
+    margin-bottom: 28px;
+   }
+
+  &__buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 200px;
+  }
+}

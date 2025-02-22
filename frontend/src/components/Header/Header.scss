@@ -1,0 +1,12 @@
+@import '@/styles/main';
+
+.header {
+  box-shadow: 0px 1px 0px $colorElements;
+  
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+  }
+}

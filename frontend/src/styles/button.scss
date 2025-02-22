@@ -1,0 +1,36 @@
+.button {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+  padding-inline: 34px;
+  height: 40px;
+  width: max-content;
+  border: 2px solid $colorPrimary;
+  border-radius: 8px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 14px;
+
+  transition: all $transition-duration;
+
+  &--primary {
+    color: $colorLight;
+    border-color: $colorPrimary;
+    background-color: $colorPrimary;
+  }
+
+  &:hover {
+    color: $colorLight;
+    border-color: $colorPrimary;
+    background-color: $colorPrimary;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.4);
+  }
+}

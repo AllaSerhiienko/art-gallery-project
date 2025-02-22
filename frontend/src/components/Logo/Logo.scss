@@ -1,0 +1,45 @@
+@import '@/styles/main';
+
+.logo {
+  &__content {
+    display: flex;
+    align-items: center;
+
+    height: 40px;
+    font-size: 0;
+    font-weight: bold;
+    transition: text-shadow $transition-duration ease-in-out;
+
+    @include onTablet {
+      font-size: 18px;
+    }
+
+    @include onDesktop {
+      font-size: 20px;
+    }
+
+    &::before {
+      content: '';
+      @include square(26px);
+      margin-right: 6px;
+      background-image: url(@/images/icons/logo.svg);
+      background-size: contain;
+
+      @include onTablet {
+        @include square(26px);
+      }
+    }
+
+    &--light {
+      color: $colorLight;
+
+      &::before {
+        background-image: url(@/images/icons/logo-white.svg);
+      }
+    }
+
+    &:hover {
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
+  }
+}

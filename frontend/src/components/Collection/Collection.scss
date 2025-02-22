@@ -1,0 +1,40 @@
+.collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); // Ширина карток фіксована
+  gap: 20px; // Відстань між картками
+  grid-auto-rows: auto; // Висота рядків автоматична, залежить від контенту
+}
+
+.artwork-card {
+  position: relative;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.artwork-card__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover; // Зображення заповнює контейнер без спотворень
+}
+
+.artwork-card__info {
+  padding: 15px;
+}
+
+.artwork-card__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.artwork-card__artist {
+  font-size: 14px;
+  color: #666;
+}
+
+.artwork-card__price {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
