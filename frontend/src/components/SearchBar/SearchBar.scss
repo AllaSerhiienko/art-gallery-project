@@ -1,9 +1,9 @@
-@import '@/styles/main';
+@import '@/styles/main.scss';
 
 .search-bar {
   &__content {
     box-sizing: border-box;
-    position: relative; 
+    position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 8px;
@@ -15,7 +15,7 @@
   }
 
   &__input {
-    position: relative; 
+    position: relative;
     box-sizing: border-box;
     display: block;
     width: 100%;

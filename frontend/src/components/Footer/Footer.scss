@@ -1,4 +1,4 @@
-@import '@/styles/main';
+@import '@/styles/main.scss';
 
 .footer {
   background-color: $colorPrimary;
@@ -9,7 +9,7 @@
     align-items: center;
     height: 120px;
   }
-  
+
   &__list {
     display: flex;
     gap: 12px;

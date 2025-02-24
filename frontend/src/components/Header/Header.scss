@@ -1,8 +1,8 @@
-@import '@/styles/main';
+@import '@/styles/main.scss';
 
 .header {
   box-shadow: 0px 1px 0px $colorElements;
-  
+
   &__content {
     display: flex;
     justify-content: space-between;

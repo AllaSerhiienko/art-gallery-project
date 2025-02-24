@@ -7,6 +7,7 @@ export const Header = () => {
       <div className="container">
         <div className="header__content">
           <Logo />
+
           <button className="header__button button">Login as Admin</button>
         </div>
       </div>

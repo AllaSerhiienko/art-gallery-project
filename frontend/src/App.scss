@@ -1,5 +1,6 @@
-@import './styles/main';
-
+@import '@/styles/main.scss';
+// @import url(@/styles/main.scss);
+// @use '@/styles/main.scss' as *;
 // iframe {
 //   display: none;
 // }
@@ -42,9 +43,9 @@
     }
   }
 
-   &__actions {
+  &__actions {
     margin-bottom: 28px;
-   }
+  }
 
   &__buttons {
     display: flex;

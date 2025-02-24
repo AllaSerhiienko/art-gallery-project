@@ -1,6 +1,5 @@
 import './App.scss';
 import { ArtworkList } from './components/ArtworkList';
-import { Collection } from './components/Collection';
 import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
