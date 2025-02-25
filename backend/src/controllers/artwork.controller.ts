@@ -15,7 +15,7 @@ export const get = async (req: Request, res: Response) => {
   let normalizedArtist = artist;
 
   if (typeof artist === 'string') {
-    normalizedArtist = artist.replaceAll('_', ' ');
+    normalizedArtist = artist.replaceAll('+', ' ');
   }
 
   const artworks = await artworkService.getFiltered({
@@ -61,9 +61,7 @@ export const create = async (req: Request, res: Response) => {
   }
 
   if (title.length > 99) {
-    res
-      .status(400)
-      .send({ message: 'Title must be 99 characters or less' });
+    res.status(400).send({ message: 'Title must be 99 characters or less' });
     return;
   }
 
@@ -80,9 +78,7 @@ export const create = async (req: Request, res: Response) => {
   }
 
   if (typeof price !== 'number' || price <= 0) {
-    res
-      .status(400)
-      .send({ message: 'Price must be a number greater than 0' });
+    res.status(400).send({ message: 'Price must be a number greater than 0' });
     return;
   }
 
@@ -108,15 +104,19 @@ export const update = async (req: Request, res: Response) => {
     return;
   }
 
-  if (!title || !artist || !type || price === undefined) {
+  if (
+    !title ||
+    !artist ||
+    !type ||
+    price === undefined ||
+    availability === undefined
+  ) {
     res.status(422).send({ message: 'Missing required fields' });
     return;
   }
 
   if (title.length > 99) {
-    res
-      .status(422)
-      .send({ message: 'Title must be 99 characters or less' });
+    res.status(422).send({ message: 'Title must be 99 characters or less' });
     return;
   }
 
@@ -133,9 +133,7 @@ export const update = async (req: Request, res: Response) => {
   }
 
   if (typeof price !== 'number' || price <= 0) {
-    res
-      .status(422)
-      .send({ message: 'Price must be a number greater than 0' });
+    res.status(422).send({ message: 'Price must be a number greater than 0' });
     return;
   }
 
@@ -144,4 +142,8 @@ export const update = async (req: Request, res: Response) => {
   const updatedArtwork = await artworkService.getById(id);
 
   res.send(updatedArtwork);
+};
+
+export const getArtists = async (req: Request, res: Response) => {
+  res.send(await artworkService.getUniqueArtists());
 };

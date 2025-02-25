@@ -1,9 +1,4 @@
 @import '@/styles/main.scss';
-// @import url(@/styles/main.scss);
-// @use '@/styles/main.scss' as *;
-// iframe {
-//   display: none;
-// }
 
 .app {
   display: flex;
@@ -16,6 +11,7 @@
 
   &__content {
     margin-top: 24px;
+    margin-bottom: 60px;
 
     @include onTablet {
       margin-top: 36px;
@@ -24,32 +20,5 @@
     @include onDesktop {
       margin-top: 40px;
     }
-  }
-
-  &__title {
-    margin-bottom: 20px;
-    font-size: 26px;
-    font-weight: 700;
-    text-transform: capitalize;
-    letter-spacing: -0.01em;
-
-    @include onTablet {
-      margin-bottom: 30px;
-      font-size: 36px;
-    }
-
-    @include onDesktop {
-      font-size: 44px;
-    }
-  }
-
-  &__actions {
-    margin-bottom: 28px;
-  }
-
-  &__buttons {
-    display: flex;
-    gap: 30px;
-    margin-bottom: 200px;
   }
 }

@@ -1,0 +1,71 @@
+@import '@/styles/main.scss';
+
+.artwork-details-page {
+  &__back {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 20px;
+    padding: 6px;
+    line-height: 24px;
+
+    &-text {
+      color: $colorSecondary;
+    }
+  }
+  
+  &__image-container {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 350px;
+    max-height: 500px;
+    object-fit: contain;
+
+
+    @include onDesktop {
+      max-width: 450px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 24px;
+    font-weight: 600;
+  }
+
+  &__list {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    @include onTablet {
+      margin-bottom: 60px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    @include onTablet {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 30px;
+    }
+  }
+}

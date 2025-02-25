@@ -1,13 +1,15 @@
 import './Logo.scss';
 
 type Props = {
-  color?: 'light',
-}
+  color?: 'light';
+};
 
-export const Logo:React.FC<Props>= ({color}) => {
+export const Logo: React.FC<Props> = ({ color }) => {
   return (
-    <a href="#" className="logo">
-      <div className={`logo__content logo__content--${color}`}>ArtGalleryManager</div>
+    <a href="/" className="logo">
+      <div className={`logo__content logo__content--${color}`}>
+        ArtGalleryManager
+      </div>
     </a>
   );
 };

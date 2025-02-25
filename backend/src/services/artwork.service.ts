@@ -1,4 +1,3 @@
-import { title } from 'process';
 import { Artwork } from '../models/Artwork.model.js';
 import { ArtworkData } from '../types/ArtworkData.js';
 import { ArtworkType } from '../types/ArtworkType.js';
@@ -48,9 +47,26 @@ export const create = (newArtwork: Omit<ArtworkData, 'id'>) => {
   return Artwork.create(newArtwork);
 };
 
-export const update = async ({ id, title, artist, type, price, availability }: ArtworkData) => {
+export const update = async ({
+  id,
+  title,
+  artist,
+  type,
+  price,
+  availability,
+}: ArtworkData) => {
   await Artwork.update(
     { title, artist, type, price, availability },
     { where: { id } },
   );
+};
+
+export const getUniqueArtists = async () => {
+  const artists = await Artwork.findAll({
+    attributes: ['artist'],
+    group: ['artist'],
+  });
+
+  console.log(artists);
+  return artists.map((author: any) => author.artist);
 };

@@ -1,4 +1,4 @@
-import { ArtworkType } from "./ArtworkType.js";
+import { ArtworkType } from './ArtworkType.js';
 
 export type ArtworkData = {
   id: string;
@@ -7,4 +7,4 @@ export type ArtworkData = {
   type: ArtworkType;
   price: number;
   availability?: boolean;
- }
+};

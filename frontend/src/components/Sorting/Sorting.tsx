@@ -35,14 +35,14 @@ export const Sorting = () => {
   };
 
   const handleSelect = (order: 'asc' | 'desc') => {
-    searchParams.set('sort', order);
+    searchParams.set('price', order);
     setSearchParams(searchParams);
 
     setIsDropdownOpen(false);
   };
 
   const handleResetSorting = () => {
-    searchParams.delete('sort');
+    searchParams.delete('price');
     setSearchParams(searchParams);
     setIsDropdownOpen(false);
   };
@@ -76,6 +76,7 @@ export const Sorting = () => {
             Prise (Ascending)
           </button>
         </li>
+
         <li>
           <button
             type="button"
@@ -87,6 +88,7 @@ export const Sorting = () => {
             Prise (Descending)
           </button>
         </li>
+
         <li>
           <button
             type="button"

@@ -1,9 +1,10 @@
+import { ArtworkType } from './ArtworkType';
+
 export type Artwork = {
   id: string;
   title: string;
   artist: string;
-  type: 'painting' | 'sculpture' | 'other';
+  type: ArtworkType;
   price: number;
-  availability: boolean;
-  imageUrl?: string;
+  availability?: boolean;
 };

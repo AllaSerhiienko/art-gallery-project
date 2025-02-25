@@ -17,6 +17,7 @@ export const Footer = () => {
                 <div className="icon icon--github"></div>
               </a>
             </li>
+
             <li className="footer__item">
               <a
                 href="mailto:allasergienko706@gmail.com"
@@ -25,6 +26,7 @@ export const Footer = () => {
                 <div className="icon icon--mail"></div>
               </a>
             </li>
+
             <li className="footer__item">
               <a href="tel:+123456789" className="footer__link">
                 <div className="icon icon--phone"></div>

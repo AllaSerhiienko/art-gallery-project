@@ -5,15 +5,15 @@
   align-items: center;
 
   box-sizing: border-box;
-  padding-inline: 34px;
   height: 40px;
-  width: max-content;
+  width: 200px;
   border: 2px solid $colorPrimary;
   border-radius: 8px;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 14px;
+  text-transform: capitalize;
 
   transition: all $transition-duration;
 
@@ -21,6 +21,16 @@
     color: $colorLight;
     border-color: $colorPrimary;
     background-color: $colorPrimary;
+  }
+
+  &--secondary {
+    color: $colorPrimary;
+    font-weight: 500;
+    border: 1px solid $colorPrimary;
+
+    @include onTablet {
+      width: 100%;
+    }
   }
 
   &:hover {
@@ -32,5 +42,11 @@
 
   &:active {
     box-shadow: 6px 8px 14px rgba(0, 0, 0, 0.4);
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
   }
 }

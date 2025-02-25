@@ -26,14 +26,6 @@
     background-image: url(@/images/icons/cross.svg);
   }
 
-  // &--menu {
-  //   background-image: url(../images/icons/menu.svg);
-  // }
-
-  // &--arrow {
-  //   background-image: url(../images/icons/chevron.svg);
-  // }
-
   &--arrow-disabled-up {
     background-image: url(@/images/icons/chevron-disabled.svg);
   }
@@ -43,39 +35,8 @@
     transform: rotate(180deg);
   }
 
-  // &--arrow-left {
-  //   background-image: url(../images/icons/chevron.svg);
-  //   transform: rotate(270deg);
-  // }
-
-  // &--arrow-left-disabled {
-  //   background-image: url(../images/icons/chevron-disabled.svg);
-  //   transform: rotate(270deg);
-  // }
-
-  // &--arrow-right {
-  //   background-image: url(../images/icons/chevron.svg);
-  //   transform: rotate(90deg);
-  // }
-
-  // &--arrow-right-disabled {
-  //   background-image: url(../images/icons/chevron-disabled.svg);
-  //   transform: rotate(90deg);
-  // }
-
-  // &--home {
-  //   background-image: url(../images/icons/home.svg);
-  // }
-
-  // &--plus {
-  //   background-image: url(../images/icons/plus.svg);
-  // }
-
-  // &--minus {
-  //   background-image: url(../images/icons/minus.svg);
-  // }
-
-  // &--minus-disabled {
-  //   background-image: url(../images/icons/minus-disabled.svg);
-  // }
+  &--arrow-left {
+    background-image: url(@/images/icons/chevron.svg);
+    transform: rotate(270deg);
+  }
 }

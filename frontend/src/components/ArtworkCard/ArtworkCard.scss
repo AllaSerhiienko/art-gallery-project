@@ -2,15 +2,11 @@
 
 .artwork-card {
   &__content {
-    // position: relative;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
 
-    // width: 100%;
-    // height: 100%;
     padding: 13px;
-    // overflow: hidden;
 
     &--not-available {
       color: $colorSecondary;
@@ -20,7 +16,7 @@
   &__image-container {
     margin-bottom: 12px;
     width: 100%;
-    aspect-ratio: 1 / 1; // Робить блок квадратним
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -34,7 +30,6 @@
   }
 
   &__title {
-    // font-size: 18px;
     font-weight: 600;
     line-height: 20px;
     letter-spacing: -0.01em;
@@ -42,7 +37,6 @@
 
   &__artist {
     font-size: 14px;
-    // font-weight: 500;
     line-height: 20px;
     letter-spacing: -0.01em;
 
@@ -53,7 +47,6 @@
 
   &__price {
     position: relative;
-    // margin-bottom: 8px;
     font-size: 20px;
     font-weight: 600;
     line-height: 26px;
