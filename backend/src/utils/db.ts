@@ -1,4 +1,5 @@
 import { Sequelize } from 'sequelize';
+import 'dotenv/config';
 
 const {
   POSTGRES_HOST,
@@ -14,5 +15,5 @@ export const sequelize = new Sequelize({
   host: POSTGRES_HOST || 'localhost',
   dialect: 'postgres',
   port: Number(POSTGRES_PORT) || 5432,
-  password: POSTGRES_PASSWORD || '1111',
+  password: POSTGRES_PASSWORD || '2223',
 });
