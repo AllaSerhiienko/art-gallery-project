@@ -13,7 +13,7 @@ To run the project locally:
 1. Clone the repository:
    ```bash
    git clone https://github.com/AllaSerhiienko/art-gallery-project.git
-
+     ```
 
 2. Go to the `frontend` folder and run the following commands:
 
